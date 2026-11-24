@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173d35"><title>Lume · Prospecção de lojas</title>
+  <script src="/static/theme.js"></script>
+  <link rel="icon" href="/static/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/style.css"><link rel="stylesheet" href="/static/themes.css"><script src="/static/accounts.js" defer></script><script src="/static/crm.js" defer></script><script src="/static/app.js" defer></script>
+</head>
+<body>
+<div id="login-screen" class="login-screen hidden">
+  <label class="login-theme">Tema <select id="login-theme-select" class="theme-select" aria-label="Tema da tela de acesso"><option value="system">Automático</option><option value="light">Claro</option><option value="dark">Escuro</option></select></label>
+  <div class="login-story"><div class="brand big">lume<span>✳</span></div><div><span class="eyebrow">PROSPECÇÃO COM DIREÇÃO</span><h1>Encontre a próxima<br>boa conversa.</h1><p>Lojas certas, critérios claros e uma rotina comercial mais leve.</p></div><small>Seu espaço de prospecção de lojas Shopify.</small></div>
+  <main class="login-side"><form id="login-form" class="login-card"><span class="eyebrow">SEU ESPAÇO DE TRABALHO</span><h2 id="login-title">Que bom ter você aqui.</h2><p id="login-description">Entre com sua senha para continuar.</p><label id="setup-token-label" class="hidden">Código de instalação<input name="setup_token" autocomplete="off" placeholder="Código exibido no terminal"></label><label>Usuário<input name="username" autocomplete="username" required minlength="3" maxlength="40" placeholder="Seu nome de usuário"></label><label id="display-name-label" class="hidden">Seu nome<input name="display_name" autocomplete="name" maxlength="80" placeholder="Como quer aparecer"></label><label>Sua senha<input name="password" type="password" autocomplete="current-password" required maxlength="200" placeholder="Digite sua senha"></label><button class="button primary full" type="submit" id="login-submit">Entrar no Lume <span>↗</span></button><button class="button full hidden" type="button" id="register-toggle">Criar minha conta</button><p id="registration-info" class="field-help hidden">Cada conta tem seu próprio espaço. O administrador acompanha contagens de uso e acessos, sem o conteúdo das suas pesquisas no painel administrativo.</p><p id="login-error" class="error" role="alert"></p><small>Os dados ficam no computador ou servidor em que o Lume está instalado.</small></form></main>
+</div>
+<div id="app" class="shell hidden">
+  <aside class="sidebar"><a href="#dashboard" class="brand">lume<span>✳</span></a><div class="workspace-label"><span class="workspace-icon">L</span><div>Meu espaço comercial<small>Prospecção Shopify</small></div></div><span class="nav-caption">ESPAÇO DE TRABALHO</span><nav>
+    <a href="#dashboard" data-nav="dashboard"><i data-icon="grid"></i>Início</a>
+    <a href="#search" data-nav="search"><i data-icon="search"></i>Buscar lojas</a>
+    <a href="#crm" data-nav="crm"><i data-icon="upload"></i>Planilha do CRM</a>
+    <a href="#leads" data-nav="leads"><i data-icon="store"></i>Lojas e contatos</a>
+    <a href="#review" data-nav="review"><i data-icon="check"></i>Revisar<span class="nav-count" id="review-count">0</span></a>
+  </nav><div class="sidebar-bottom"><a href="#account" data-nav="account"><i data-icon="contact"></i><span id="account-name">Minha conta</span></a><a href="#admin" data-nav="admin" id="admin-nav" class="hidden"><i data-icon="shield"></i>Administração</a><a href="#activity" data-nav="activity"><i data-icon="clock"></i>Histórico</a><a href="#settings" data-nav="settings"><i data-icon="settings"></i>Configurações</a><button id="logout" class="nav-button"><i data-icon="logout"></i>Sair da conta</button></div></aside>
+  <div class="main-shell"><header class="topbar"><div class="breadcrumb">Meu espaço <span>/</span> <strong id="page-label">Início</strong></div><div class="topbar-right"><label class="theme-label" for="theme-select">Tema</label><select id="theme-select" class="theme-select" aria-label="Tema"><option value="system">Automático</option><option value="light">Claro</option><option value="dark">Escuro</option></select><span id="connection-status" class="subtle"></span></div></header><main id="content" class="content" tabindex="-1"></main><footer class="footer"><span>Lume · Seus contatos, organizados.</span></footer></div>
+</div>
+<dialog id="lead-dialog"><div id="lead-dialog-content"></div></dialog>
+<div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+</body></html>
